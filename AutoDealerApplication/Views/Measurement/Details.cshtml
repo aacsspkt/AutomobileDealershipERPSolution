@@ -1,0 +1,47 @@
+﻿@model Measurement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mb-3">
+    <div class="row">
+        <div class="col">
+            <h2>Measurement Details</h2>
+        </div>
+    </div>
+</div>
+    <hr />
+<div class="container mb-3">
+    <dl class="row mb-3">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    <div class="row mb-3">
+        <div class="col">
+            <a class="btn btn-sm btn-primary me-2" style="width:10rem;" asp-controller="Measurement" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            <a class="btn btn-sm btn-danger" style="width:10rem;" asp-controller="Measurement" asp-action="ConfirmDelete" asp-route-id="@Model.Id">Delete</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-sm btn-secondary" style="width:10rem;" asp-controller="Measurement" asp-action="Index">Back To List</a>
+        </div>  
+    </div>
+</div>
